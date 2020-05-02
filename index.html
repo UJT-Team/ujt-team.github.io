@@ -108,7 +108,12 @@
 				<h2 class="section-title">提个建议</h2>
 			</div>
 			<div class="col-md-8 col-md-offset-2">
-				<form action="https://formspree.io/mgenewwy" method="POST">
+				发送给（请选择）：
+				<a href="javascript:void(0);" onclick="tj('formspree.io/mgenewwy','jyb666')">jyb666</a>
+				<br/><br/>
+			</div>
+			<div class="col-md-8 col-md-offset-2">
+				<form action="https://formspree.io/mgenewwy" method="POST" id="jianyi">
 					<div class="row">
 						<div class="col-md-6 form-group">
               <input class="form-control" id="name" name="name" placeholder="Name" type="text" required />
@@ -129,7 +134,13 @@
 		</div>
 	</div>
 </div>
-
+<script>
+	function tj(url,data)
+	{
+	  $("#jianyi").attr("action","https://"+url);
+	  $("#contact-button").html("发送 -> "+data);
+	}
+</script>
 <!-- START SECTION -->
 <div class="section background-dark dark-bg">
 	<div class="container">
